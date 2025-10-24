@@ -1,0 +1,7 @@
+{
+  "name": "Gemini Voice Chatbot Widget",
+  "description": "A full-duplex, multi-language conversational voice chatbot widget with interruption capabilities, powered by the Gemini API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
