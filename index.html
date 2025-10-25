@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF--8" />
+    <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gemini Voice Chatbot</title>
+    <title>My Awesome Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
   <script type="importmap">
 {
@@ -17,9 +16,54 @@
   }
 }
 </script>
+    <style>
+      /* Some basic styles for the host page */
+      body { font-family: sans-serif; line-height: 1.6; padding: 2rem; color: #333; }
+      h1 { color: #111; }
+      p { max-width: 600px; }
+      code { background-color: #eee; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+      .embed-instructions {
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+      }
+       .embed-instructions ol { padding-left: 20px; }
+       .embed-instructions li { margin-bottom: 0.5rem; }
+    </style>
 </head>
-  <body class="bg-gray-100">
-    <div id="root"></div>
+  <body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a sample page to demonstrate how the Gemini Chatbot Widget can be embedded.</p>
+    <p>The widget will automatically appear in the bottom-right corner of this page because the script is loaded below.</p>
+    
+    <div class="embed-instructions">
+      <h2>How to Embed This Widget on Your Site</h2>
+      <p>
+        The error <code>Cannot GET /index.tsx</code> happens because web servers are not configured to send raw <code>.tsx</code> source code. You must first <strong>build</strong> or <strong>compile</strong> your project into a standard JavaScript file (e.g., <code>widget.js</code>) that browsers can run.
+      </p>
+
+      <ol>
+        <li><strong>Build Your Project:</strong> Use a build tool like Vite or Create React App. Run the build command (e.g., <code>npm run build</code>). This will create a production-ready folder, usually named <code>dist</code>.</li>
+        <li><strong>Deploy the Build Output:</strong> Upload the contents of the <code>dist</code> folder to your hosting provider (like Netlify, Vercel, or Google Cloud Run).</li>
+        <li><strong>Use the Correct Script Tag:</strong> Copy the code below and paste it before the closing <code>&lt;/body&gt;</code> tag on your page.</li>
+      </ol>
+      
+      <p>
+        <strong>Important:</strong> Replace <code>https://your-chatbot-app-domain.com/assets/widget.js</code> with the actual URL to the compiled JavaScript file from your deployment.
+      </p>
+      <pre><code>&lt;script type="module" src="https://your-chatbot-app-domain.com/assets/widget.js"&gt;&lt;/script&gt;</code></pre>
+      <p style="font-size: 0.9em; margin-top: 1rem;">
+        <em>Note: Your server hosting the chatbot must be configured with CORS (Cross-Origin Resource Sharing) headers to allow other domains to load this script.</em>
+      </p>
+    </div>
+
+    <!-- 
+      This script tag works for local development because the dev server
+      compiles .tsx files on the fly. For a live, deployed website,
+      you MUST use the compiled JavaScript file as shown in the instructions above.
+    -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

@@ -1,14 +1,14 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
-const rootElement = document.getElementById('root');
-if (!rootElement) {
-  throw new Error("Could not find root element to mount to");
-}
+// Create a container div for the widget
+const widgetContainer = document.createElement('div');
+widgetContainer.id = 'gemini-voice-chatbot-widget-container';
+document.body.appendChild(widgetContainer);
 
-const root = ReactDOM.createRoot(rootElement);
+// Mount the App component into the container
+const root = ReactDOM.createRoot(widgetContainer);
 root.render(
   <React.StrictMode>
     <App />
