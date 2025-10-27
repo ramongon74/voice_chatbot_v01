@@ -1,15 +1,15 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "module": "NodeNext",
-      "moduleResolution": "NodeNext",
-      "outDir": "./dist",
-      "rootDir": "./src",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules"]
-  }
+  "compilerOptions": {
+    "target": "ES2022",                     /* Target moderno */
+    "module": "NodeNext",                  /* Módulo ESM para Node */
+    "moduleResolution": "NodeNext",        /* Resolución de módulos moderna */
+    "outDir": "./dist",                    /* Carpeta de salida (ya la usamos) */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*"],                 /* Asegúrate de compilar todo en src */
+  "exclude": ["node_modules"]
+}
